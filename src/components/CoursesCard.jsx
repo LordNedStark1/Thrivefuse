@@ -4,13 +4,13 @@ import LinearWithValueLabel from './ProgressBar'
 
 function CoursesCard({courseTitle, image, progress}) {
   return (
-    <div className='course-card-container shadow-md shadow-slate-600  '>
-       <div className='course-inner-container'>
-       <div className='img-title-div'>
-            <img src={image} alt=''/>
-            <span>{courseTitle}</span>
+    <div className=' bg-white rounded mt-2 shadow-md shadow-slate-600 mr-4 w-56 '>
+       <div className=' ml-5 mt-3' >
+       <div className='img-title-div flex pt-4'  >
+            <img src={image} alt='' width={35} height={35}/>
+            <span className='ml-24'>{courseTitle}</span>
         </div>
-        <div className='pt-9  w-36'>
+        <div className='pt-9  w-44 mb-4 ml-2 '>
           <LinearWithValueLabel value={progress} />
       </div>
        </div>

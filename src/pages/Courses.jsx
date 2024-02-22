@@ -1,12 +1,13 @@
 import React from "react";
-import LinearWithValueLabel from "../components/ProgressBar";
-
+import CoursesCard from "../components/CoursesCard";
+import generalInage from '../assets/blue back ground cross.jpeg'
+import GeneralCourse from "../components/reuseables/GeneralCourse";
 
 
 const activeCourses = [
 {
     courseTitle: 'Literature', 
-    image: './',
+    image: generalInage,
     progress: 80,
 },
 {
@@ -30,27 +31,49 @@ const activeCourses = [
   progress: 40,
 },
 ]
+const availableCourses = [
+  {
+      courseTitle: 'Geometry', 
+      image: generalInage,
+      progress: 0,
+      description: 'This is how the world goes rouns, pls don ask any more questions plz. thats akk fo today guys'
+  },
+  {
+    courseTitle: 'Economics', 
+    image: './',
+    progress: 30,
+    description: 'This is how the world goes rouns, pls don ask any more questions plz. thats akk fo today guys',
+  },
+  {
+    courseTitle: 'Corel Draw', 
+    image: './',
+    progress: 40,      
+    description: 'This is how the world goes rouns, pls don ask any more questions plz. thats akk fo today guys',
+    },
+  {
+    courseTitle: 'Go Lang', 
+    image: './',
+    progress: 20,
+    description: 'This is how the world goes rouns, pls don ask any more questions plz. thats akk fo today guys',
+  
+  },
+  {
+    courseTitle: 'French', 
+    image: './',
+    progress: 40,
+    description: 'This is how the world goes rouns, pls don ask any more questions plz. thats akk fo today guys',
+  },
+  ]
 function Courses() {
   return (
     <div>
       <div className="h-20 bg-blue-200  m-3 mb-5 shadow-md shadow-gray-500 rounded"></div>
       <p className="ml-5 font-semibold "> Registered Courses</p>
-      <div className="flex flex-row snap-proximity snap-x ">
-      <div className="course-card-container shadow-md shadow-slate-600 snap-center">
-        <div className="course-inner-container " >
-          <div className="img-title-div">
-            <img src={activeCourses[0].image} alt="" />
-            <span>{activeCourses[0].courseTitle}</span>
-          </div>
-          <div className="pt-9  w-36">
-            <LinearWithValueLabel value={activeCourses[0].progress} />
-            {/* <span>{activeCourses[0].progress}%</span> */}
-          </div>
-        </div>
+        <CoursesCard image={activeCourses[0].image} progress={activeCourses[0].progress} courseTitle={activeCourses[0].courseTitle}/>
+      <p>Other available courses</p>
+      <div>
+        <GeneralCourse />
       </div>
-
-      </div>
-      
     </div>
   );
 }

@@ -5,6 +5,23 @@ import generalImage from '../assets/blue back ground cross.jpeg'
 import books from '../assets/books-removebg-preview.png'
 import laptop from '../assets/cartoon-laptop-removebg-preview.png'
 
+const coursecardValues = [
+    {
+        progress: 45,
+        image: generalImage,
+        courseTitle: 'Cobol'
+    },
+    {
+        progress: 60,
+        image: generalImage,
+        courseTitle: 'python'
+    },
+    {
+        progress: 30,
+        image: generalImage,
+        courseTitle: 'Java '
+    },
+]
 function Profile() {
     return (
         <div className='profile-main-container h-screen'>
@@ -22,9 +39,9 @@ function Profile() {
             </div>
 
             <div className=' ml-5 grid lg:grid-cols-3  '>
-                <CoursesCard progress={25} image={generalImage} courseTitle={'java'}/>
-                <CoursesCard progress={55} image={generalImage} courseTitle={'python'}/>
-                <CoursesCard progress={75} image={generalImage} courseTitle={'js'}/>
+                    {coursecardValues.map((value, index) => (
+                            <CoursesCard progress={value.progress} image={value.image} courseTitle={value.courseTitle}/>
+                    ))}
             </div>
 
         </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import generalImage from "../assets/blue back ground cross.jpeg";
+import SideBarItem from './reuseables/SideBarItem'
 import { BsGrid1X2Fill } from "react-icons/bs";
 import { FaBookReader } from "react-icons/fa";
 import { GrResources } from "react-icons/gr";
@@ -16,26 +17,10 @@ function SideBar() {
         {true && <div className="h-6 w-2 absolute left-44 bg-cyan-700 "></div>}
       </div>
 
-      <div className="side-options flex flex-row">
-        <FaBookReader />
-        <button className="ml-6">Courses</button>
-        {false && <div className="h-6 w-2 ml-8 bg-cyan-700 ">I</div>}
-      </div>
-
-      <div className="side-options flex flex-row">
-        <GrResources />
-        <button className="ml-5 hover:bg-cyan-100 pr-3 pl-3 focus:bg-cyan-100">
-          Resources
-        </button>
-        {false && <div className="h-6 w-2 ml-8 bg-cyan-700 ">I</div>}
-      </div>
-      <div className="side-options flex flex-row">
-        <GiBookshelf />
-        <button className="ml-5 hover:bg-cyan-100 pr-3 pl-3 focus:bg-cyan-100">
-          Assessments
-        </button>
-        {false && <div className="h-6 w-2 ml-8 bg-cyan-700 ">I</div>}
-      </div>
+      {/* <SideBarItem icon={<BsGrid1X2Fill />} name={"Dashboard"} condition={true}/> */}
+      <SideBarItem icon={<FaBookReader />} name={"Courses"} condition={false}/>
+      <SideBarItem icon={<GrResources />} name={"Resources"} condition={false}/>
+      <SideBarItem icon={<GiBookshelf />} name={"Assessments"} condition={false}/>   
     </div>
   );
 }
