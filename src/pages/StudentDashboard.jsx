@@ -16,8 +16,8 @@ function StudentDashboard() {
         <div className="ml-7 mt-5">
             <h2 className=" text-xl font-bold">Dashboard</h2>
           </div>
-          {/* <Profile /> */}
-          <Courses/>
+          <Profile />
+          {/* <Courses/> */}
         </div>
         <DateRangeCalendarCalendarsProp/>
       </div>

@@ -4,7 +4,7 @@ import LinearWithValueLabel from './ProgressBar'
 
 function CoursesCard({courseTitle, image, progress}) {
   return (
-    <div className=' bg-white rounded mt-2 shadow-md shadow-slate-600 mr-4 w-56 '>
+    <div id={courseTitle} className=' bg-white rounded mt-2 mr-9 mb-7 shadow-md shadow-slate-600 w-60 pr-5 inline-block cursor-pointer hover:scale-105 ease-in-out-duration-300'>
        <div className=' ml-5 mt-3' >
        <div className='img-title-div flex pt-4'  >
             <img src={image} alt='' width={35} height={35}/>
